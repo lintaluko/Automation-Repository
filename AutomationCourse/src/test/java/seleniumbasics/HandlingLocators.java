@@ -1,0 +1,38 @@
+package seleniumbasics;
+
+import org.openqa.selenium.By;
+
+public class HandlingLocators extends Base {
+	public void verifyLocators() {
+		driver.findElement(By.id("single-input-field"));
+		driver.findElement(By.className("form-control"));
+		driver.findElement(By.tagName("input"));
+		driver.findElement(By.name("viewport"));
+		driver.findElement(By.linkText("Simple Form Demo"));
+		driver.findElement(By.partialLinkText("simple"));
+
+		driver.findElement(By.cssSelector("input[id='single-input-field']"));
+		// syntax - tagname[attribute='attribute value']
+		/// html/body/section/div/div/div[2]/div[1]/div/div[2]/form/div[1]/input
+		// absolute xpath
+		driver.findElement(By.xpath("//button[@id='button-one']"));
+		// syntax - tagname[@attribute='attribute value']
+		driver.findElement(By.xpath("//button[text()='Show Message']"));
+		// syntax - //tagname[text()='text']
+		driver.findElement(By.xpath(" //button[starts-with(text(),"));
+		driver.findElement(By.xpath("//button[@id='button-one' and @type='button']"));
+		// using two attribute using 'and' to get unique element
+		driver.findElement(By.xpath("//button[@id='button-one' or @id='button-one-electronics']"));
+		// using or
+		driver.findElement(By.xpath(" //div[contains (text(), 'Single Input Field')]//parent::div[@class='card'] "));
+		//using an attribute which gets i of 1 and the target
+		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']"));
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
