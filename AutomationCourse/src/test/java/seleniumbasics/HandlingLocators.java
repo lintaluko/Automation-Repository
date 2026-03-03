@@ -31,7 +31,7 @@ public class HandlingLocators extends Base {
 		driver.findElement(By.xpath("//button[@id='button-one']//preceding:: div[@class='card']"));
 		driver.findElement(By.xpath(" //button[@id='button-one']//ancestor::div"));
 		driver.findElement(By.xpath(" //div[@class='card']//descendant::div"));
-		
+
 	}
 
 	public static void main(String[] args) {

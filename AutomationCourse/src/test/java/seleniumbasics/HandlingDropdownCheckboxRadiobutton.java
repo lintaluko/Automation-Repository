@@ -8,10 +8,10 @@ public class HandlingDropdownCheckboxRadiobutton extends Base {
 	public void veryfyDropDown() {
 		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
 		WebElement dropdown = driver.findElement(By.id("dropdowm-menu-1"));
-		Select select =new Select(dropdown);
-		//select.selectByIndex(2)
-		//select.selectByValue("c#");
-		select.selectByVisibleText("SQL"); //cant use three methods. just one at a time
+		Select select = new Select(dropdown);
+		// select.selectByIndex(2);
+		// select.selectByValue("c#");
+		select.selectByVisibleText("SQL"); // use one method at a time
 	}
 
 	public static void main(String[] args) {
