@@ -12,6 +12,15 @@ public class HandlingDropdownCheckboxRadiobutton extends Base {
 		// select.selectByIndex(2);
 		// select.selectByValue("c#");
 		select.selectByVisibleText("SQL"); // use one method at a time
+
+	}
+
+	public void verifyCheckBox() {
+		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+		WebElement checkbox=driver.findElement(By.xpath("//input[@value='option-2']"));
+		checkbox.click();
+		System.out.println(checkbox.isSelected()); //pre-defined Method
+		
 	}
 
 	public static void main(String[] args) {
@@ -19,6 +28,7 @@ public class HandlingDropdownCheckboxRadiobutton extends Base {
 		HandlingDropdownCheckboxRadiobutton drop = new HandlingDropdownCheckboxRadiobutton();
 		drop.browserLaunch();
 		drop.veryfyDropDown();
+		drop.verifyCheckBox();
 	}
 
 }
