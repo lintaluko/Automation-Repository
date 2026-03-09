@@ -32,6 +32,15 @@ public class HandlingActions extends Base {
 		act.dragAndDrop(drag, drop).build().perform();
 
 	}
+	public void dropDown() {
+	//	driver.navigate().to("https://selenium.qabible.in/drag-drop.php");
+		WebElement others=driver.findElement(By.id("others"));
+		others.click();
+		WebElement dragg=driver.findElement(By.xpath("//span[text()='Draggable n°1']"));
+		WebElement dropp =driver.findElement(By.id("mydropzone"));
+		Actions act = new Actions(driver);
+		act.dragAndDrop(dragg, dropp).build().perform();
+	}
 
 	public void verifyKeyboardActions() throws AWTException {
 		Robot robot = new Robot();
@@ -49,6 +58,7 @@ public class HandlingActions extends Base {
 		// actions.verifyRightClick();
 		// actions.verifyMouseHover();
 		// actions.verifyDragandDrop();
+		//actions.dropDown();
 		try {
 			actions.verifyKeyboardActions();
 		} catch (AWTException e) {

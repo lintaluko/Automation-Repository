@@ -12,7 +12,6 @@ public class HandlingDropdownCheckboxRadiobutton extends Base {
 		// select.selectByIndex(2);
 		// select.selectByValue("c#");
 		select.selectByVisibleText("SQL"); // use one method at a time
-
 	}
 
 	public void verifyCheckBox() {
