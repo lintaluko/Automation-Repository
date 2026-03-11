@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 public class HandlingFrames extends Base {
 	public void verifyFrame() {
 		driver.navigate().to("https://demoqa.com/frames");
-		List<WebElement> totalframe = driver.findElements(By.tagName("iframe"));
+		List<WebElement> totalframe = driver.findElements(By.tagName("iframe")); //List is collection used to handle multiple value
 		System.out.println(totalframe.size());
 		WebElement frame = driver.findElement(By.id("frame1"));
 		driver.switchTo().frame(frame);
